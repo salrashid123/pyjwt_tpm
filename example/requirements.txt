@@ -1,0 +1,3 @@
+pyjwt-tpm
+tpm2-pytss
+cryptography
