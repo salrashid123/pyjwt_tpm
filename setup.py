@@ -12,7 +12,7 @@ with io.open(readme_filename, encoding='utf-8') as readme_file:
 
 setuptools.setup(
     name="pyjwt_tpm",
-    version="0.0.1",
+    version="0.0.2",
     author="Sal Rashid",
     author_email="salrashid123@gmail.com",
     description="PyJWT signer for TPM based keys",

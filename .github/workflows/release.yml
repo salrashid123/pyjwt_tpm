@@ -26,7 +26,7 @@ jobs:
       env:
         PYTHONDONTWRITEBYTECODE: 1
       run: |
-        pip install logging pytest pytest-cov tpm2-pytss cryptography
+        pip install logging pytest pytest-cov tpm2-pytss cryptography pyjwt
         pytest testing/test_all.py --junitxml=report.xml -p no:warnings
 
     - name: Publish test results
