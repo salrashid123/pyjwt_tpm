@@ -12,6 +12,8 @@ The TPM key can be bound using Password or arbitrary TPM Auth policies.  For exa
 
 on python pypi: https://pypi.org/project/pyjwt-tpm/
 
+Note: this library is not supported by Google
+
 ---
 
 ## Usage
@@ -60,8 +62,9 @@ You can use a software TPM ([swtpm](https://github.com/stefanberger/swtpm)) if y
 
 ```bash
 cd example/
-# rm -rf /tmp/myvtpm && mkdir /tmp/myvtpm && swtpm_setup --tpmstate /tmp/myvtpm --tpm2 --ecc  --create-ek-cert && 
-swtpm socket --tpmstate dir=/tmp/myvtpm --tpm2 --server type=tcp,port=2321 --ctrl type=tcp,port=2322 --flags not-need-init,startup-clear --log level=5
+# rm -rf myvtpm && mkdir myvtpm && swtpm_setup --tpmstate myvtpm --tpm2 --ecc  --create-ek-cert
+
+swtpm socket --tpmstate dir=myvtpm --tpm2 --server type=tcp,port=2321 --ctrl type=tcp,port=2322 --flags not-need-init,startup-clear --log level=5
 
 ## in a new window
 pip3 install -r requirements.txt
